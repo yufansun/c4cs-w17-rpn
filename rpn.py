@@ -9,8 +9,9 @@ OPERATORS = {
 	'/': operator.truediv,
 }
 
+
 def calculate(arg):
-	stack=list()
+	stack = list()
 	for operand in arg.split():
 		try:
 			operand = float(operand)
@@ -19,7 +20,7 @@ def calculate(arg):
 			arg2 = stack.pop()
 			arg1 = stack.pop()
 			operator_fn = OPERATORS[operand]
-			result = operator_fn(arg1,arg2)
+			result = operator_fn(arg1, arg2)
 			
 			stack.append(result)
 	return stack.pop()
@@ -27,7 +28,7 @@ def calculate(arg):
 def main():
 	while True:
 		result = calculate(input('rpn calc> '))
-		print("Result: ",result)
+		print("Result:", result)
 
 if __name__ == '__main__':
 	main()
