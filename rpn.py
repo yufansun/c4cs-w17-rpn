@@ -11,6 +11,8 @@ OPERATORS = {
 	'%': operator.mod,
 }
 
+def hello():
+	print("Hello world")
 
 def calculate(arg):
 	stack = list()
@@ -30,6 +32,7 @@ def calculate(arg):
 def main():
 	while True:
 		result = calculate(input('rpn calc> '))
+		hello()
 		print("Result:", result)
 
 if __name__ == '__main__':
